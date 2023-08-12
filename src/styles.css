@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #006633;
+  --accent: #c0462e;
+  --secondary-color: #cc6955;
+  --background: #ffffff;
+  --text: #000000;
+}
+.uni_nav {
+  background-color: var(--primary-color);
+}
+.uniuyo_logo {
+  max-width: 100%;
+  height: auto;
+}
