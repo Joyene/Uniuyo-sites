@@ -1,55 +1,30 @@
-var responsiveSlider = function () {
-  var slider = document.getElementById("img");
-  var sliderWidth = slider.offsetWidth;
-  var slideList = document.getElementById("slide_wrap");
-  var count = 1;
-  var items = slideList.querySelectorAll("li").length;
-  var prev = document.getElementById("prev");
-  var next = document.getElementById("next");
+let index = 0;
+let transitionDelay = 2000;
 
-  window.addEventListener("resize", function () {
-    sliderWidth = slider.offsetWidth;
+let slideContainer = document.querySelector(".slideshow");
+4;
+let slides = slideContainer.querySelectorAll(".slide");
+
+for (let slide of slides) {
+  slide.style.transition = `all ${transitionDelay / 1000}s linear`;
+}
+
+showSlide(index);
+
+function showSlide(slideNumber) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i == slideNumber ? "block" : "none";
   });
 
-  var prevSlide = function () {
-    if (count > 1) {
-      count = count - 2;
-      slideList.style.left = "-" + count * sliderWidth + "px";
-      count++;
-    } else if ((count = 1)) {
-      count = items - 1;
-      slideList.style.left = "-" + count * sliderWidth + "px";
-      count++;
-    }
-  };
+  index++;
 
-  var nextSlide = function () {
-    if (count < items) {
-      slideList.style.left = "-" + count * sliderWidth + "px";
-      count++;
-    } else if ((count = items)) {
-      slideList.style.left = "0px";
-      count = 1;
-    }
-  };
+  if (index >= slides.length) {
+    index = 0;
+  }
+}
 
-  next.addEventListener("click", function () {
-    nextSlide();
-  });
-
-  prev.addEventListener("click", function () {
-    prevSlide();
-  });
-
-  setInterval(function () {
-    nextSlide();
-  }, 3000);
-};
-
-window.onload = function () {
-  responsiveSlider();
-};
-
+// transition to next slide every x seconds
+setInterval(() => showSlide(index), transitionDelay);
 //header code
 const header = new Promise(function (myResolve, myReject) {
   setTimeout(function () {
@@ -214,4 +189,13 @@ function resetimg() {
   img.style.width = "300px";
   img.style.height = "200px";
   img.style.transition = "width 0.5s ease";
+}
+//nav function
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
 }
