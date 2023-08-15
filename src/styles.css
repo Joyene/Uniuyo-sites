@@ -12,3 +12,295 @@
   max-width: 100%;
   height: auto;
 }
+.main {
+  background-color: var(--primary-color);
+}
+.main a {
+  justify-content: space-between;
+  margin: 10px;
+  background-color: var(--primary-color);
+  font-size: 18px;
+  color: var(--background);
+}
+
+.image1 {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 10px auto;
+  overflow: hidden;
+  box-shadow: 14px -9px 156px -26px rgba(0, 0, 0, 0.75);
+}
+.image1 ul {
+  position: relative;
+  list-style: none;
+  height: auto;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+.image1 ul li {
+  position: relative;
+  height: 100%;
+  float: left;
+}
+.image1 ul li .img1 {
+  width: 600px;
+  height: 400px;
+}
+.image1 ul li .img2 {
+  width: 600px;
+  height: 400px;
+}
+.image1 ul li .img3 {
+  width: 600px;
+  height: 400px;
+}
+.image1 ul li .img4 {
+  width: 600px;
+  height: 400px;
+}
+.image1 #prev,
+.image1 #next {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--accent);
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+.image1 #prev {
+  left: 5px;
+}
+.image1 #next {
+  right: 10px;
+}
+
+.image1 #prev:hover,
+.image1 #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+/*col-6 styling*/
+#demo {
+  background: #006633;
+  background: linear-gradient(to right, #006633 10%, #000000 38%, #cc6955 57%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  font-weight: 700;
+}
+#para {
+  font-size: 20px;
+  font-weight: 600;
+}
+.para2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+hr {
+  color: var(--accent);
+  height: 50px;
+}
+.image-container1,
+.image-container2,
+.image-container3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.images1 {
+  width: 300px;
+  height: 200px;
+}
+.image2 {
+  width: 350px;
+  height: 200px;
+}
+.image3,
+.image4 {
+  width: 300px;
+  height: 200px;
+}
+.image5 {
+  width: 300px;
+  height: 200px;
+}
+.image6 {
+  width: 300px;
+  height: 200px;
+}
+.image7 {
+  width: 300px;
+  height: 200px;
+}
+.image8 {
+  width: 330px;
+  height: 200px;
+}
+.image9 {
+  width: 300px;
+  height: 200px;
+}
+.image10 {
+  width: 300px;
+  height: 200px;
+}
+.image11 {
+  width: 300px;
+  height: 200px;
+  /* transition: transform 0.2s;*/
+}
+/*
+.image11:hover {
+  transform: scale(2.5);
+}*/
+.image12 {
+  width: 300px;
+  height: 200px;
+}
+.image-container1 div,
+.image-container2 div,
+.image-container3 div {
+  margin: 20px;
+}
+.card-title {
+  text-align: center;
+}
+.card {
+  background-color: var(--accent);
+}
+@media screen and (max-width: 760px) {
+  .col-6 {
+    width: 100%;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    width: 300px;
+  }
+  .image1 {
+    width: 100%;
+    margin: 0;
+  }
+  .image1 ul {
+    width: 3000%;
+  }
+  .image-slider {
+    width: 100%;
+  }
+  #demo {
+    font-size: 48px;
+    text-align: center;
+  }
+  #para {
+    font-size: 16px;
+    text-align: center;
+  }
+  .para2 {
+    font-size: 14px;
+    text-align: center;
+  }
+  .image-container1,
+  .image-container2,
+  .image-container3 {
+    display: block;
+    justify-self: center;
+  }
+  .card {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+  }
+  .images1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6,
+  .image7,
+  .image8,
+  .image9,
+  .image10,
+  .image11,
+  .image12 {
+    width: 350px;
+    height: 200px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .col-6 {
+    width: 100%;
+    display: block;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    width: 300px;
+  }
+  .image1 {
+    width: 100%;
+    margin: 0;
+  }
+  .image1 ul {
+    width: 3000%;
+  }
+  .image-slider {
+    width: 100%;
+  }
+  #demo {
+    font-size: 48px;
+    text-align: center;
+  }
+  #para {
+    font-size: 16px;
+  }
+  .para2 {
+    font-size: 14px;
+    text-align: center;
+  }
+  .image-container1,
+  .image-container2,
+  .image-container3 {
+    display: block;
+    justify-self: center;
+  }
+  .card {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  .images1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6,
+  .image7,
+  .image8,
+  .image9,
+  .image10,
+  .image11,
+  .image12 {
+    width: 420px;
+    height: 200px;
+    justify-content: center;
+  }
+}
